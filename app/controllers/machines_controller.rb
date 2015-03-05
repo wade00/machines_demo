@@ -1,6 +1,5 @@
 class MachinesController < ApplicationController
   before_action :set_machine, only: [:edit, :update, :destroy]
-
   respond_to :html, :json
 
   def index
@@ -39,5 +38,9 @@ class MachinesController < ApplicationController
 
     def machine_params
       params.require(:machine).permit(:stock_number, :year, :machine_make, :machine_model, :machine_type, :serial, :hours, :price, :location, :description)
+    end
+
+    def set_access_control_headers
+      headers['Access-Control-Allow-Origin'] = "*"
     end
 end
