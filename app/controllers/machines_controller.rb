@@ -1,5 +1,6 @@
 class MachinesController < ApplicationController
   before_action :set_machine, only: [:edit, :update, :destroy]
+  after_filter :set_access_control_headers, only: [:index]
   respond_to :html, :json
 
   def index
