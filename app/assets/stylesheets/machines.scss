@@ -1,0 +1,63 @@
+/* index table */
+
+.add-new-machine-link {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+.index-searchbar {
+  margin: 20px 0;
+}
+
+.input-append {
+  input {
+    width: 85%;
+    display: inline-block;
+  }
+}
+
+.index-table-header {
+  background-color: #EEE;
+  a {
+    color: #999;
+  }
+}
+
+.table {
+  font-size: 15px;
+  tr {
+    height: 50px;
+  }
+  a {
+    color: #555;
+  }
+}
+
+th {
+  font-size: 17px;
+}
+
+.add-new-machine-link a {
+  color: #3AA04F;
+}
+
+.index-searchbar {
+  margin-bottom: 15px;
+}
+
+/* add machine form */
+
+.add-machine-form label {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 10px;
+  clear: both;
+}
+
+.add-machine-form div {
+  padding: 5px 3px;;
+}
+
+.machine-form-buttons {
+  padding: 20px 10px;
+}

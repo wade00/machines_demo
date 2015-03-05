@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<div class="text-center">
+  <h1>All Machines</h1>
+  <%= link_to 'New Machine', new_machine_path %>
+</div>
+
+<table class="table table-hover">
+  <thead class="index-table-header">
+    <tr>
+      <th class="index_stock">
+        <%= link_to "Stock" %>
+      </th>
+      <th class="index_make">
+        <%= link_to "Make" %>
+      </th>
+      <th class="index_model">
+        <%= link_to "Model" %>
+      </th>
+      <th class="index_type">
+        <%= link_to "Equipment Type" %>
+      </th>
+      <th class="index_hours">
+        <%= link_to "Hours" %>
+      </th>
+      <th class="index_price">
+        <%= link_to "Price" %>
+      </th>
+      <th class="index_location">
+        <%= link_to "Location" %>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @machines.each do |machine| %>
+      <tr>
+        <td>
+          <%= link_to "#{machine.stock_number}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.machine_make}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.machine_model}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.machine_type}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.hours}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.price}", edit_machine_path(machine.id) %>
+        </td>
+        <td>
+          <%= link_to "#{machine.location}", edit_machine_path(machine.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

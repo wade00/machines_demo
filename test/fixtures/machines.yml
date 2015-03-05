@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_number: MyString
+  year: MyString
+  machine_make: MyString
+  machine_model: MyString
+  machine_type: MyString
+  serial: MyString
+  hours: MyString
+  price: MyString
+  location: MyString
+  description: MyText
+
+two:
+  stock_number: MyString
+  year: MyString
+  machine_make: MyString
+  machine_model: MyString
+  machine_type: MyString
+  serial: MyString
+  hours: MyString
+  price: MyString
+  location: MyString
+  description: MyText

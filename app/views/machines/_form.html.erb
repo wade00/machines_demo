@@ -1,0 +1,61 @@
+<%= form_for(machine) do |f| %>
+
+  <%= render 'shared/errors', resource: machine %>
+
+  <%= f.label :stock_number, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :stock_number, class: 'form-control', autofocus: 'autofocus', placeholder: 'Start here' %>
+  </div>
+
+  <%= f.label :year, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :year, class: 'form-control' %>
+  </div>
+
+  <%= f.label :machine_make, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :machine_make, class: 'form-control' %>
+  </div>
+
+  <%= f.label :machine_model, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :machine_model, class: 'form-control' %>
+  </div>
+
+  <%= f.label :machine_type, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :machine_type, class: 'form-control' %>
+  </div>
+
+  <%= f.label :serial, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :serial, class: 'form-control' %>
+  </div>
+
+  <%= f.label :hours, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :hours, class: 'form-control' %>
+  </div>
+
+  <%= f.label :price, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :price, class: 'form-control' %>
+  </div>
+
+  <%= f.label :location, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_field :location, class: 'form-control' %>
+  </div>
+
+  <%= f.label :description, class: 'col-sm-2 col-sm-offset-1 control-label' %>
+  <div class="col-sm-9">
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Include any options, dimensions or attachments...' %>
+  </div>
+
+  <div class="row machine-form-buttons">
+    <div class="col-md-12 text-center">
+      <%= f.submit "Save", class: "btn btn-success" %>
+      <%= link_to "Cancel", machines_path %>
+    </div>
+  </div>
+<% end %>
