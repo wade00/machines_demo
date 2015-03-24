@@ -22,15 +22,11 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
-    @location.phone = "#{@location.phone[0..2]}-#{@location.phone[3..5]}-#{@location.phone[6..10]}"
-    @location.save
     respond_with(@location)
   end
 
   def update
     @location.update(location_params)
-    @location.phone = "#{@location.phone[0..2]}-#{@location.phone[3..5]}-#{@location.phone[6..10]}"
-    @location.save
     respond_with(@location)
   end
 
