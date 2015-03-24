@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20150324174242) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.string   "phone",      limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "phone"
   end
 
   create_table "machines", force: true do |t|
