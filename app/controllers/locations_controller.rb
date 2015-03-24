@@ -42,7 +42,7 @@ class LocationsController < ApplicationController
     end
 
     def location_params
-      params.require(:location).permit(:address, :city, :state, :zip)
+      params.require(:location).permit(:address, :city, :state, :zip, :phone)
     end
 
     def set_access_control_headers
