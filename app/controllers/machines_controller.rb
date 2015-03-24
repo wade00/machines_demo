@@ -10,10 +10,12 @@ class MachinesController < ApplicationController
 
   def new
     @machine = Machine.new
+    @locations = Location.all
     respond_with(@machine)
   end
 
   def edit
+    @locations = Location.all
   end
 
   def create

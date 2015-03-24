@@ -44,7 +44,9 @@
 
   <%= f.label :location, class: 'col-sm-2 col-sm-offset-1 control-label' %>
   <div class="col-sm-9">
-    <%= f.text_field :location, class: 'form-control' %>
+    <%= f.select :location,
+                  options_from_collection_for_select(@locations, 'id', 'city'),
+                  class: 'form-control' %>
   </div>
 
   <%= f.label :description, class: 'col-sm-2 col-sm-offset-1 control-label' %>
