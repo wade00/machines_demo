@@ -29,7 +29,9 @@ class LocationsController < ApplicationController
 
   def update
     @location.update(location_params)
-    @location.phone = "#{@location.phone[0..2]}-#{@location.phone[3..5]}-#{@location.phone[6..10]}"
+    if @location.phone.length == 10
+      @location.phone = "#{@location.phone[0..2]}-#{@location.phone[3..5]}-#{@location.phone[6..10]}"
+    end
     @location.save
     respond_with(@location)
   end
@@ -45,7 +47,7 @@ class LocationsController < ApplicationController
     end
 
     def location_params
-      params.require(:location).permit(:address, :city, :state, :zip, :phone)
+      params.require(:location).permit(:address, :city, :state, :zip, :phone, :equipment_alley_account)
     end
 
     def set_access_control_headers
